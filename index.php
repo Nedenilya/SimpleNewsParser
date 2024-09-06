@@ -14,15 +14,15 @@ $html = HtmlDomParser::str_get_html($crl);
 $news = array();
 
 $items = $html->find('.node__cart__item');
+var_dump($items);
+// foreach ($items as $item) {
+// 	$image = $item->find('.node__cart__item__inside__photo', 0)->children(0)->src;
 
-foreach ($items as $item) {
-	$image = $item->find('.node__cart__item__inside__photo', 0)->children(0);
+// var_dump($image);
 
-var_dump($image);
-
-	$title = $item->find('.node__cart__item__inside__info__title', 0)->plaintext;
-	$description = $item->find('.node__cart__item__inside__info__description', 0)->plaintext;
-	$date = $item->find('time', 0)->plaintext;
+	// $title = $item->find('.node__cart__item__inside__info__title', 0)->plaintext;
+	// $description = $item->find('.node__cart__item__inside__info__description', 0)->plaintext;
+	// $date = $item->find('time', 0)->plaintext;
 	
 	// $news[] = [
 	// 	'img' => $image, 
@@ -30,7 +30,8 @@ var_dump($image);
 	// 	'desc' => $description, 
 	// 	'date' => $date
 	// ];
-}
+//}
+
 // var_dump($news);
 // foreach($news as $item) {
 // 	echo $item['img'] . "\n\n";
